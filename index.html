@@ -3,79 +3,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h1>check the console for the output 👌</h1>
 
 
-<div style="max-width:700px;margin:1rem 0;padding:0;">
-    <label style="display:block;margin-bottom:8px;font-weight:600;color:#333;">First Exercise</label>
-    <pre style="background:#f6f8fa;border:1px solid #e1e4e8;padding:12px;border-radius:6px;overflow:auto;margin:0;font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:14px;color:#24292e;">
-const num = [1, 2, 3, 4];
+    <div class="example">
+        <label class="label">First Exercise</label>
+        <pre class="code-block">const num = [1, 2, 3, 4];
 let sum = 0;
 for (let n of num) {
         sum += n; 
 }
 
-console.log(sum);
-    </pre>
-</div>
-<div style="max-width:700px;margin:1rem 0;padding:0;">
-    <label style="display:block;margin-bottom:8px;font-weight:600;color:#333;">Second Exercise</label>
-    <pre style="background:#f6f8fa;border:1px solid #e1e4e8;padding:12px;border-radius:6px;overflow:auto;margin:0;font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:14px;color:#24292e;">
-const names = ["ali", "sara", "omer", "lina", "mohammed","radwan"];
-
-function longNames(names) {
-
-    let result = [];
-
-    for (let name of names) {
-        if (name.length > 4) {
-            result.push(name);
-        }
-    }
-
-    return result;
-}
-
-
-// second Method 
-
-
-function longNames2(names) {
-    return names.filter(name => name.length > 4);
-}
-console.log(longNames(names)); 
-console.log(`second method output: ${longNames2(names)}`);     
-    </pre>
-
-    <div style="max-width:700px;margin:1rem 0;padding:0;">
-        <label style="display:block;margin-bottom:8px;font-weight:600;color:#333;">Third Exercise</label>
-        <pre style="background:#f6f8fa;border:1px solid #e1e4e8;padding:12px;border-radius:6px;overflow:auto;margin:0;font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:14px;color:#24292e;">
-    function countWords(str) {
-    const words = str.trim().split(" ").filter(word => word.length > 0);
-
-    return words.reduce((acc, word) => {
-        acc[word] = (acc[word] || 0) + 1;
-        return acc;
-    }, {});
-}
-console.log(countWords("hello world hello"));
-        </pre>
+console.log(sum);</pre>
     </div>
 
-<script>
-// first excersise
-const num = [1, 2, 3, 4];
-let sum = 0;
-
-for (let n of num) {
-    sum += n; 
-}
-
-console.log(sum); 
-// second excersise
-    const names = ["ali", "sara", "omer", "lina", "mohammed","radwan"];
+    <div class="example">
+        <label class="label">Second Exercise</label>
+        <pre class="code-block">const names = ["ali", "sara", "omer", "lina", "mohammed","radwan"];
 
 function longNames(names) {
 
@@ -89,14 +36,21 @@ function longNames(names) {
 
     return result;
 }
-// second Method 
+
+
+// second Method  
+
+
 function longNames2(names) {
     return names.filter(name => name.length > 4);
 }
 console.log(longNames(names)); 
-console.log(`second method output: ${longNames2(names)}`);
-// thired excersise
-function countWords(str) {
+console.log(`second method output: ${longNames2(names)}`);</pre>
+    </div>
+
+    <div class="example">
+        <label class="label">Third Exercise</label>
+        <pre class="code-block">function countWords(str) {
     const words = str.trim().split(" ").filter(word => word.length > 0);
 
     return words.reduce((acc, word) => {
@@ -104,10 +58,9 @@ function countWords(str) {
         return acc;
     }, {});
 }
-console.log(countWords("hello world hello"));
+console.log(countWords("hello world hello"));</pre>
+    </div>
 
-
-
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
