@@ -6,7 +6,50 @@
 </head>
 <body>
     <h1>check the console for the output 👌</h1>
-    <script>
+
+
+<div style="max-width:700px;margin:1rem 0;padding:0;">
+    <label style="display:block;margin-bottom:8px;font-weight:600;color:#333;">First Exercise</label>
+    <pre style="background:#f6f8fa;border:1px solid #e1e4e8;padding:12px;border-radius:6px;overflow:auto;margin:0;font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:14px;color:#24292e;">
+const num = [1, 2, 3, 4];
+let sum = 0;
+for (let n of num) {
+        sum += n; 
+}
+
+console.log(sum);
+    </pre>
+</div>
+<div style="max-width:700px;margin:1rem 0;padding:0;">
+    <label style="display:block;margin-bottom:8px;font-weight:600;color:#333;">Second Exercise</label>
+    <pre style="background:#f6f8fa;border:1px solid #e1e4e8;padding:12px;border-radius:6px;overflow:auto;margin:0;font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:14px;color:#24292e;">
+const names = ["ali", "sara", "omer", "lina", "mohammed","radwan"];
+
+function longNames(names) {
+
+    let result = [];
+
+    for (let name of names) {
+        if (name.length > 4) {
+            result.push(name);
+        }
+    }
+
+    return result;
+}
+
+
+// second Method 
+
+
+function longNames2(names) {
+    return names.filter(name => name.length > 4);
+}
+console.log(longNames(names)); 
+console.log(longNames2(names));     
+    </pre>
+<script>
+// first excersise
 const num = [1, 2, 3, 4];
 let sum = 0;
 
@@ -15,6 +58,29 @@ for (let n of num) {
 }
 
 console.log(sum); 
+// second excersise
+    const names = ["ali", "sara", "omer", "lina", "mohammed","radwan"];
+
+function longNames(names) {
+
+    let result = [];
+
+    for (let name of names) {
+        if (name.length > 4) {
+            result.push(name);
+        }
+    }
+
+    return result;
+}
+// second Method 
+function longNames2(names) {
+    return names.filter(name => name.length > 4);
+}
+console.log(longNames(names)); 
+console.log(`second method output: ${longNames2(names)}`);
+
+
     </script>
 </body>
 </html>
